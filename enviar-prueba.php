@@ -2,8 +2,6 @@
 $correo = $_POST["correo"];
 $mensaje = $_POST["mensaje"];
 
-$body = "Correo: " . $correo . "<br>Mensaje: " . $mensaje;
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -41,7 +39,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'hola estoy enviando un correo desde local host';
-    $mail->Body    = $body;
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     
     
 
